@@ -1,10 +1,12 @@
 FROM golang:1.23-alpine AS base
  
 WORKDIR /app
-  
-RUN go mod download
 
 COPY go.mod .
+
+RUN go mod download
+
+COPY . .
 
 RUN go build -o main .
 
@@ -16,7 +18,7 @@ FROM gcr.io/distroless/base
 
 COPY --from=base /app/main .
 
-COPY --from=base src/ ./static/
+COPY --from=base /app/ ./static/
 
 EXPOSE 8080
 

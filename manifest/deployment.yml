@@ -17,7 +17,7 @@ spec:
     spec:
       # Modify the container with yours
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: golang-app
+        image: yogas4/golang-app:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080

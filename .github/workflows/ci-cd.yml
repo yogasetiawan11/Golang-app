@@ -67,11 +67,10 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/golang-app:${{github.run_id}}
-          with:
-            file: ./Dockerfile
-            context: ./Golang-app
 
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest

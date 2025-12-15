@@ -18,6 +18,6 @@ spec:
       # Modify the container with yours
       containers:
       - name: golang-app
-        image: yogas4/golang-app:{{ Values.image.tag }}
+        image: yogas4/golang-app:{{ .Values.image.tag }}
         ports:
         - containerPort: 8080

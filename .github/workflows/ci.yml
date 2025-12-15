@@ -4,12 +4,12 @@ on:
     branches:
       - main
 
-  ignorepaths:
+    paths-ignore:
     - 'README.md'
     - 'LICENSE'
-    - 'Ingress-controller/**'
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
 

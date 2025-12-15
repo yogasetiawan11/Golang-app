@@ -62,8 +62,9 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/golang-app:${{github.run_id}}
-          file: ./Dockerfile
-          context: .
+          with:
+            file: ./Golang-app/Dockerfile
+            context: ./Golang-app
 
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest

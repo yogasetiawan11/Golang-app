@@ -1,4 +1,6 @@
 # Golang-app
+<img width="1160" height="491" alt="Image" src="https://github.com/user-attachments/assets/568eb5e6-26b0-4629-8c58-f185c17ffce1" />
+
 
 # Run app locally on your VM
 Run the app locally execute this command in root directory

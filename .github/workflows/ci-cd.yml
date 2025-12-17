@@ -83,12 +83,14 @@ jobs:
       with:
         token: ${{ secrets.TOKEN }}
 
-    - name: Update tag in Helm chart
+    - name: Search for values.yml path
       run: |
         pwd
         ls -la
         find . -name values.yml
-        sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/golang-application/values.yml
+    
+    - name: Update tag in Helm chart
+        sed -i 's/tag: .*/tag: "${{github.run_id}}"/' ./helm/golang-application/values.yml
 
     - name: Commit and push changes
       run: |

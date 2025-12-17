@@ -7,6 +7,7 @@ on:
     paths-ignore:
     - 'README.md'
     - 'LICENSE'
+    - '.github/*'
 
 jobs:
 
@@ -86,7 +87,7 @@ jobs:
       run: |
         pwd
         ls -la
-        find . -name Dockerfile
+        find . -name values.yml
         sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/golang-application/values.yml
 
     - name: Commit and push changes

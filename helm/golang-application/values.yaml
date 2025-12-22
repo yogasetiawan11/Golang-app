@@ -8,7 +8,7 @@ image:
   repository: yogas4/golang-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "20439476819"
+  tag: "20439513231"
 
 ingress:
   enabled: false

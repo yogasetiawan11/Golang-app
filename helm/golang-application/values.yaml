@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: yogasetiawan11/Golang-app
+  repository: yogas4/golang-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1"

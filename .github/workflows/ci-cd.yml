@@ -7,6 +7,7 @@ on:
     paths-ignore:
     - 'README.md'
     - 'LICENSE'
+    - 'helm/**'
 
 jobs:
 
@@ -97,5 +98,5 @@ jobs:
         git config --global user.email "yogasetiawan121212@gmail.com"
         git config --global user.name "yoga.setiawan11"
         git add helm/golang-application/values.yaml
-        git commit -m "Update tag in Helm chart"
+        git commit -m "Update tag in Helm chart [skip ci]"
         git push
